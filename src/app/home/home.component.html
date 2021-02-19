@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="w-75 m-auto py-3" >
+        <input type="text" class="form-control" [(ngModel)]='term'>
+    </div>
+    <div class="row">
+       
+        <div class="col-md-4 mt-4">
+            <div class="brd mt-5 mb-3">
+
+            </div>
+<h2>Trinding <br>movies<br>to witch now<br></h2>
+<p>most watchied  movies by  day</p>
+<div class="brdr">
+
+</div>
+        </div>
+        <div *ngFor="let movy of treindingmovy"  class=" mt-4 col-md-2">
+            <div [routerLink]="['/movies',movy.id]">
+                <img [src]="poster+movy.poster_path" class="w-100">
+            <h4>{{movy.title}} </h4>
+            <p class="trt">{{movy.vote_average}}</p>
+
+        </div>
+        </div>
+    </div>
+</div>
+<!--...........................................................-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-4">
+            <div class="brd mt-5 mb-3">
+
+            </div>
+<h2>Trinding <br>tv<br>to witch now<br></h2>
+<p>most watchied  tv by  day</p>
+<div class="brdr">
+
+</div>
+        </div>
+        <div *ngFor="let tv of treindingtv"  class=" mt-4 col-md-2">
+            <div [routerLink]="['/movies',tv.id]">
+                <img [src]="poster+tv.poster_path" class="w-100">
+            <h4>{{tv.title}}{{tv.name}} </h4>
+            <p class="trt">{{tv.vote_average}}</p>
+
+        </div>
+        </div>
+    </div>
+</div>
